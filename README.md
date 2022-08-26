@@ -12,7 +12,11 @@
 ## Installation
   Fork the repository and run npm install to get all the dependencies.
 ## Usage
-  After running index.js in node, a series of questions will be asked to help create a professional README file.  Here is a link to the video demo.
+  After running index.js in node, a series of questions will be asked to help create a professional README file.   
+  
+  Here is a link to the video demo.
+  
+  [![Readme-Pic.png](https://i.postimg.cc/yxNj8HM9/Readme-Pic.png)](https://postimg.cc/ZB1pw1KK)
 ## License
     This application is covered by the APACHE license.
 ## Contributing
