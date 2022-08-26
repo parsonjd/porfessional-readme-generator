@@ -23,7 +23,7 @@ const questions = [
     },
     {
         type: 'input',
-        message: 'Provide instructions and examples for use. Include screenshots as needed.',
+        message: 'Provide instructions and examples for use.',
         name: 'usage',
     },
 
@@ -42,7 +42,7 @@ const questions = [
         type: 'list',
         message: 'Choose your license for your project.',
         name: 'license',
-        choices: ['MIT', 'ISC', 'Apache', 'GPL', 'BSD', 'None'],
+        choices: ['MIT', 'APACHE', 'BSD', 'None'],
 
     },
 
@@ -62,7 +62,7 @@ const questions = [
 // Writes users responses to file
 function writeToFile(fileName, data) {
     try {
-        fs.writeFileSync(fileName, (data))
+        fs.writeFileSync(fileName, generateMarkdown(data))
         console.log("Your Professional Readme is generated!")
     }
     catch {
@@ -74,8 +74,7 @@ function writeToFile(fileName, data) {
 function init() {
     inquirer.prompt(questions).then(function (response) {
         console.log(response);
-        let data = JSON.stringify(response)
-        writeToFile(`${response.title}.md`, data);
+        writeToFile(`./assets/${response.title}.md`, response);
     });
 }
 
